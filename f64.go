@@ -137,7 +137,7 @@ func (f Float64) TestBitL(n int) bool {
 	return (*bitset.BitSet)(unsafe.Pointer(p + 0)).Test(n)
 }
 
-// SetInt8 encodes int8 into float64 as if it were [8]int8. n must satisfy 0 <= n < 7. Ignored otherwise.
+// SetInt8 encodes int8 into float64 as if it were [8]int8. n must satisfy 0 <= n < 8. Ignored otherwise.
 func (f *Float64) SetInt8(n int, i int8) {
 	if 0 <= n && n < 8 {
 		p := uintptr(unsafe.Pointer(f))
@@ -145,7 +145,7 @@ func (f *Float64) SetInt8(n int, i int8) {
 	}
 }
 
-// Int8 decodes int8 from float64 as if it were [8]int8. n must satisfy 0 <= n < 7. Ignored otherwise.
+// Int8 decodes int8 from float64 as if it were [8]int8. n must satisfy 0 <= n < 8. Ignored otherwise.
 func (f *Float64) Int8(n int) int8 {
 	if 0 <= n && n < 8 {
 		p := uintptr(unsafe.Pointer(f))
@@ -154,7 +154,7 @@ func (f *Float64) Int8(n int) int8 {
 	return 0
 }
 
-// SetUint8 encodes int8 into float64 as if it were [8]uint8. n must satisfy 0 <= n < 7. Ignored otherwise.
+// SetUint8 encodes int8 into float64 as if it were [8]uint8. n must satisfy 0 <= n < 8. Ignored otherwise.
 func (f *Float64) SetUint8(n int, i uint8) {
 	if 0 <= n && n < 8 {
 		p := uintptr(unsafe.Pointer(f))
@@ -162,7 +162,7 @@ func (f *Float64) SetUint8(n int, i uint8) {
 	}
 }
 
-// Uint8 decodes uint8 from float64 as if it were [8]uint8. n must satisfy 0 <= n < 7. Ignored otherwise.
+// Uint8 decodes uint8 from float64 as if it were [8]uint8. n must satisfy 0 <= n < 8. Ignored otherwise.
 func (f *Float64) Uint8(n int) uint8 {
 	if 0 <= n && n < 8 {
 		p := uintptr(unsafe.Pointer(f))
